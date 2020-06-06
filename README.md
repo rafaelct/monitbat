@@ -1,4 +1,4 @@
-<h1>MonitBat</h1>
+<h1>MonitBat v1.3</h1>
 <b>Descrição:</b> Monitor de bateria do notebook escrito em python
 <tr>
 <p>
@@ -15,5 +15,6 @@ Se a bateria estiver 100% e conectado no carregador informa de 1 em 1 minuto.
 
 <li>Windows 10</li>
 <li>Python 3.8</li>
+<li>pip install pywin32</li>
 <li>pip install psutil</li>
 <li>pip install win10toast</li>
