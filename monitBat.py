@@ -8,12 +8,18 @@ toast = win10toast.ToastNotifier()
 speak = wincl.Dispatch("SAPI.SpVoice")
 
 minuto = 5
+bateria : int
+fonte : bool
 
 while True :
     
+    try :
+        bateria = psutil.sensors_battery().percent
+        fonte = psutil.sensors_battery().power_plugged
+    except AttributeError :
+        print("Não foi encontrado um sensor de bateria.");
+        exit(1)
 
-    bateria = psutil.sensors_battery().percent
-    fonte = psutil.sensors_battery().power_plugged
 
     msgBateria = "Bateria está "+ str(bateria)+" por cento carregada."
     
